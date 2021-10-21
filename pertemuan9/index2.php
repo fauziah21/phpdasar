@@ -1,6 +1,17 @@
 <?php
-require 'functions.php';
-$mahasiswa = query("SELECT * FROM mahasiswa");
+//koneksi ke database
+$conn = mysqli_connect("localhost", "root", "", "phpdasar");
+
+//ambil data dari table mahasiswa / query data mahasiswa
+$result = mysqli_query($conn, "SELECT * FROM mahasiswa");
+// var_dump($result);
+
+// cek apakah database ada 
+// if (!$result) {
+//     echo mysqli_error($conn);
+// }
+
+//ambil data (fetch) mahasiswa dari object result
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +38,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
         </tr>
 
         <?php $i = 1; ?>
-        <?php foreach ($mahasiswa as $key => $row) : ?>
+        <?php while ($row = mysqli_fetch_assoc($result)) : ?>
             <tr>
                 <td><?php echo $i ?></td>
                 <td>
@@ -45,7 +56,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
                 <td><?= $row["jurusan"]; ?></td>
             </tr>
             <?php $i++ ?>
-        <?php endforeach; ?>
+        <?php endwhile; ?>
     </table>
 </body>
 
