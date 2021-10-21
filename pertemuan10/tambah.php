@@ -6,19 +6,11 @@ if (isset($_POST["submit"])) {
     // var_dump($_POST);
     //cek apakah data berhasil ditambahkan ke db
     if (tambah($_POST) > 0) {
-        echo "
-        <script>
-        alert('Data berhasil ditambahkan!);
-        window.location.href = 'index.php';
-        </script>
-        ";
+        echo "<script>alert('Data berhasil ditambahkan!')</script>";
+        echo "<script>window.open('index.php','_self')</script>";
     } else {
-        echo "
-        <script>
-        alert('Data gagal ditambahkan!);
-        document.location.href = 'index.php';
-        </script>
-        ";
+        echo "<script>alert('Data berhasil ditambahkan!')</script>";
+        echo "<script>window.open('index.php','_self')</script>";
     }
 }
 ?>
@@ -61,7 +53,9 @@ if (isset($_POST["submit"])) {
             <li>
                 <button type="submit" name="submit">TAMBAH</button>
             </li>
+
         </ul>
+        <a href="index.php">home</a>
     </form>
 </body>
 
