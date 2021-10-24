@@ -61,35 +61,48 @@ if (isset($_POST["login"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    <h1>Halaman Login</h1>
+    <h1>Welcome back to
+        <br>
+        <span style="color: #1E4AE5">Learning PHP</span>
+
+    </h1>
 
     <?php if (isset($error)) : ?>
         <p style="color: red;font-style:italic">Username / Password salah</p>
     <?php endif; ?>
 
-    <form action="" method="post">
-        <ul>
-            <li>
-                <label for="username">Username :</label>
-                <input type="text" name="username" id="username">
-            </li>
-            <li>
-                <label for="password">Password :</label>
-                <input type="password" name="password" id="password">
-            </li>
-            <li>
-                <input type="checkbox" name="remember" id="remember">
-                <label for="remember">Remember me</label>
+    <div class="card">
+        <form action="" method="post">
+            <ul>
+                <li>
+                    <label for="username">Username :</label>
+                    <input type="text" name="username" id="username">
+                </li>
+                <li>
+                    <label for="password">Password :</label>
+                    <input type="password" name="password" id="password">
+                </li>
+                <li>
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Remember me</label>
 
-            </li>
-            <li>
-                <button type="submit" name="login">Login</button>
-            </li>
-        </ul>
-    </form>
+                </li>
+                <li>
+                    <button type="submit" name="login" class="btn-login">Login</button>
+                </li>
+            </ul>
+        </form>
+    </div>
 </body>
 
 </html>
