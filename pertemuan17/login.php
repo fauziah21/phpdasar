@@ -67,7 +67,7 @@ if (isset($_POST["login"])) {
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 
     <!-- custom css -->
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/login.css">
 </head>
 
 <body>
@@ -81,26 +81,27 @@ if (isset($_POST["login"])) {
         <p style="color: red;font-style:italic">Username / Password salah</p>
     <?php endif; ?>
 
-    <div class="card">
+    <div class="card-login">
         <form action="" method="post">
-            <ul>
-                <li>
-                    <label for="username">Username :</label>
-                    <input type="text" name="username" id="username">
-                </li>
-                <li>
-                    <label for="password">Password :</label>
-                    <input type="password" name="password" id="password">
-                </li>
-                <li>
-                    <input type="checkbox" name="remember" id="remember">
-                    <label for="remember">Remember me</label>
 
-                </li>
-                <li>
-                    <button type="submit" name="login" class="btn-login">Login</button>
-                </li>
-            </ul>
+
+            <label for="username">Username </label>
+            <input type="text" name="username" id="username" placeholder="Masukkan Username">
+
+
+            <label for="password">Password </label>
+            <input type="password" name="password" id="password" placeholder="Masukkan Password">
+
+
+
+            <label for="remember" class="remember">
+                <input type="checkbox" name="remember" id="remember">Remember me
+            </label>
+
+
+            <button type="submit" name="login" class="btn-login">Login</button>
+
+
         </form>
     </div>
 </body>
