@@ -73,7 +73,7 @@ if (isset($_POST["login"])) {
 <body>
     <h1>Welcome back to
         <br>
-        <span style="color: #1E4AE5">Learning PHP</span>
+        <span style="color: #C27FAC">Learning PHP</span>
 
     </h1>
 
